@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!--need-->
+    <link rel="stylesheet" href="./components/css/style.css" />
+  </head>
+  <body>
+    <header class="h-top">
+      <div class="container p-0">
+        <nav class="navbar navbar-expand-lg bg-white">
+          <a class="navbar-brand" href="#">MexicoDestinos</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarColor01"
+            aria-controls="navbarColor01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <div class="mr-auto"></div>
+            <span>powe by img2</span>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="container-fluid">
+      <div class="row flex-column-reverse flex-sm-row mb-5">
+        <div class="col-lg-8">
+          <div class="row justify-content-md-center">
+            <div class="col-12 col-sm-8">
+              <table class="table m-0">
+                <tbody>
+                  <tr>
+                    <th
+                      scope="row"
+                      class="align-middle h5 text-color-title-secondary"
+                    >
+                      Total
+                    </th>
+                    <td>
+                      <div class="h2 m-0 text-color-title-secondary font-weight-bold text-nowrap text-right">
+                        <span>${4,485} </span
+                        ><small class="font-weight-bold"
+                          >{mxn}</small
+                        >
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <hr class="mt-0" />
+              <div class="text-center">
+                <span class="h5 text-color-title"
+                  >Hola {cliente} recibiste una solicitud de pago de México
+                  Destinos</span
+                >
+              </div>
+              <div class="text-center pt-3">
+                <span class="h5 text-color-title-secondary">Calendario de pago</span>
+              </div>
+              <div class="pt-3">
+                <div class="card card-payment-moth">
+                  <div class="card-body">
+                    <div class="text-center">
+                      <span class="h5 text-color-title"
+                      >Plan de pagos</span>
+                  </div>
+                  <div class="text-center">
+                    <span class="text-color-title-secondary"
+                    >Sin intereses</span>
+                </div>
+
+
+                <div class="text-center">
+                  <span class="font-weight-bold"
+                  >Puedes cancelar sin costo antes del </span>
+                  <span class="text-color-title font-weight-bold"
+                  > {dd/MM/YYYY}</span>
+              </div>
+                </div>
+              </div>
+              <form class="pt-4">
+                <div class="text-center pt-5">
+                  <span class="h5 text-color-title-secondary">Tus Datos</span>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="inputName" class="font-weight-bold">Nombre</label>
+                      <input type="text" class="form-control" id="inputName" data-help="#inputNameHelp">
+                      <small id="inputNameHelp" class="form-text text-danger">We'll never share your email with anyone else.</small>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="inputLastName" class="font-weight-bold">Apellido</label>
+                      <input type="text" class="form-control" id="inputLastName" data-help="#inputLastNameHelp">
+                      <small id="inputLastNameHelp" class="form-text text-danger">We'll never share your email with anyone else.</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="inputEmail" class="font-weight-bold">Correo Electrónico</label>
+                      <input type="mail" class="form-control" id="inputEmail" data-help="#inputMailHelp">
+                      <small id="inputMailHelp" class="form-text text-danger">We'll never share your email with anyone else.</small>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="inputPhoneNumber" class="font-weight-bold">Télefono Fijo</label>
+                      <input type="text" class="form-control" id="inputPhoneNumber" data-help="#inputPhoneNumberHelp">
+                      <small id="inputPhoneNumberHelp" class="form-text text-danger">We'll never share your email with anyone else.</small>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="text-center pt-5">
+                <span class="h5 text-color-title-secondary">Métodos de pago</span>
+              </div>
+              <div class="row justify-content-md-center pt-3">
+                <div class="col-12 col-sm-8">
+                  <div class="card card-express">
+                    <div class="card-body">
+                      <div class="text-center text-color-title font-weight-bold">
+                        Tarjeta de crédito y débito
+                      </div>
+                      <div class="text-center text-color-title-secondary font-weight-bold">Pagos seguros y rápidos con cualquiera de tus tarjetas</div>
+                      <div class="text-center pt-2">
+                        {img visa} {img master}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="col-lg-4 pr-sm-0">
+          <div class="card card-checkout-color">
+            <div class="card-body">
+              <div class="text-center pt-3">Reservación</div>
+              <hr />
+              <h4 class="text-center title">{NOMBRE DEL HOTEL}</h4>
+              <div class="text-center">Con {plan de desayuno}</div>
+              <div class="pt-4">
+                <div class="table-responsive">
+                  <table class="table table-information">
+                    <tbody>
+                      <tr>
+                        <th scope="row">Incluye</th>
+                        <td>
+                          <div>{N} {Adultos}</div>
+                          <div>{N} {Habitación} - {Nombre habitación}</div>
+                          <div>Plan: {Nombre del plan}</div>
+                          <div>{N días} {días} y {N noches} {noches}</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Llegada</th>
+                        <td>
+                          <div>{Nombre día}, {dd} del {mes} del {YYYY}</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Salida</th>
+                        <td>
+                          <div>{Nombre día}, {dd} del {mes} del {YYYY}</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="dborder">
+                          Fecha limite de pago
+                        </th>
+                        <td class="dborder">
+                          <div>{dd} del {mes} del {YYYY}</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th
+                          scope="row"
+                          class="text-center align-middle h4 total"
+                        >
+                          Total
+                        </th>
+                        <td>
+                          <div class="h1 font-weight-bold text-nowrap">
+                            <span>${price}</span
+                            ><small class="align-text-top font-weight-bold h4"
+                              >{mxn}</small
+                            >
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
