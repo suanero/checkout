@@ -87,7 +87,20 @@
                     >Sin intereses</span>
                 </div>
 
-
+                <!-- el ancho depende del % asignado al style -->
+                <!-- el ultimo no lleva para quitar el espacio -->
+                <div class="pl-sm-5 pr-sm-5">
+                <div id="progressEjm" class="progressContainer d-flex flex-wrap justify-content-sm-center mt-3">
+                  <div class="progressContainer-son" style="width: 20%;">
+                    <div class="progress-circle circle-selected">1</div>
+                    <div class="progress-line"></div>
+                    <div class="progress-prices-info">
+                      <div class="text-center font-weight-bold"><span class="align-baseline">$499</span><small class="align-text-top font-weight-bold">mxn</small></div>
+                      <div class=" text-color-light"><small class="font-weight-bold">Hoy</small></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
                 <div class="text-center">
                   <span class="font-weight-bold"
                   >Puedes cancelar sin costo antes del </span>
@@ -97,22 +110,22 @@
                 </div>
               </div>
               <form class="pt-4">
-                <div class="text-center pt-5">
+                <div class="text-center pt-5 pb-4">
                   <span class="h5 text-color-title-secondary">Tus Datos</span>
                 </div>
                 <div class="row">
                   <div class="col">
                     <div class="form-group">
                       <label for="inputName" class="font-weight-bold">Nombre</label>
-                      <input type="text" class="form-control" id="inputName" data-help="#inputNameHelp">
-                      <small id="inputNameHelp" class="form-text text-danger">We'll never share your email with anyone else.</small>
+                      <input type="text" class="form-control" id="inputName" data-help="#inputNameHelp" data-type="text">
+                      <small id="inputNameHelp" class="form-text text-danger"></small>
                     </div>
                   </div>
                   <div class="col">
                     <div class="form-group">
                       <label for="inputLastName" class="font-weight-bold">Apellido</label>
-                      <input type="text" class="form-control" id="inputLastName" data-help="#inputLastNameHelp">
-                      <small id="inputLastNameHelp" class="form-text text-danger">We'll never share your email with anyone else.</small>
+                      <input type="text" class="form-control" id="inputLastName" data-help="#inputLastNameHelp" data-type="text">
+                      <small id="inputLastNameHelp" class="form-text text-danger"></small>
                     </div>
                   </div>
                 </div>
@@ -120,15 +133,15 @@
                   <div class="col">
                     <div class="form-group">
                       <label for="inputEmail" class="font-weight-bold">Correo Electrónico</label>
-                      <input type="mail" class="form-control" id="inputEmail" data-help="#inputMailHelp">
-                      <small id="inputMailHelp" class="form-text text-danger">We'll never share your email with anyone else.</small>
+                      <input type="mail" class="form-control" id="inputEmail" data-help="#inputMailHelp" data-type="email">
+                      <small id="inputMailHelp" class="form-text text-danger"></small>
                     </div>
                   </div>
                   <div class="col">
                     <div class="form-group">
-                      <label for="inputPhoneNumber" class="font-weight-bold">Télefono Fijo</label>
+                      <label for="inputPhoneNumber" class="font-weight-bold" data-type="phone">Télefono Fijo</label>
                       <input type="text" class="form-control" id="inputPhoneNumber" data-help="#inputPhoneNumberHelp">
-                      <small id="inputPhoneNumberHelp" class="form-text text-danger">We'll never share your email with anyone else.</small>
+                      <small id="inputPhoneNumberHelp" class="form-text text-danger"></small>
                     </div>
                   </div>
                 </div>
@@ -236,5 +249,89 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="/app/components/js/formValidation.js"></script>
+    <script>
+      const pricesEjm = [
+        {
+          price: 499,
+          currency: "mxn",
+          date: "hoy",
+        }
+        ,{
+          price: 20452,
+          currency: "mxn",
+          date: "11 feb",
+        }
+        ,{
+          price: 20452,
+          currency: "mxn",
+          date: "11 feb",
+        }
+        ,{
+          price: 20452,
+          currency: "mxn",
+          date: "11 feb",
+        }
+        ,{
+          price: 20452,
+          currency: "mxn",
+          date: "11 feb",
+        }
+        ,{
+          price: 20452,
+          currency: "mxn",
+          date: "11 feb",
+        }
+        ,{
+          price: 499,
+          currency: "mxn",
+          date: "hoy",
+        }
+        ,{
+          price: 20452,
+          currency: "mxn",
+          date: "11 feb",
+        }
+        ,{
+          price: 20452,
+          currency: "mxn",
+          date: "11 feb",
+        }
+        ,{
+          price: 20452,
+          currency: "mxn",
+          date: "11 feb",
+        }
+        ,{
+          price: 20452,
+          currency: "mxn",
+          date: "11 feb",
+        }
+        ,{
+          price: 20452,
+          currency: "mxn",
+          date: "11 feb",
+        }
+      ];
+
+      let query = "";
+      //este proceso mejor hacerlo desde el lado del servidor
+      for(i=0; i < pricesEjm.length; i++)
+      {
+        const item = pricesEjm[i];
+        
+        let q = '<div class="progressContainer-son" style="width: 16.6%;">';
+        q += '<div class="progress-circle">' + (i + 1) + '</div>';
+        q += '<div class="progress-line"></div>';
+        q += '<div class="progress-prices-info">';
+        q += '<div class="text-center font-weight-bold"><span class="align-baseline">$' + item.price + '</span><small class="align-text-top font-weight-bold">' + item.currency + '</small></div>';
+        q += '<div class=" text-color-light"><small class="font-weight-bold">' + item.date + '</small></div>';
+        q += '</div>';
+        q += '</div>';
+        query += q;
+      }
+      $("#progressEjm").html(query);
+
+    </script>
   </body>
 </html>

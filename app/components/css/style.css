@@ -10,6 +10,10 @@
   color: #838383;
 }
 
+.text-color-light {
+  color: #838383;
+}
+
 .card-express {
   -webkit-box-shadow: 2px 2px 5px #dedede;
           box-shadow: 2px 2px 5px #dedede;
@@ -49,6 +53,55 @@
 .card-checkout-color .table-information th.dborder {
   border-top: 1px solid #0000001a;
   border-bottom: 1px solid #0000001a;
+}
+
+.progressContainer {
+  margin-bottom: 40px;
+}
+
+.progressContainer .progressContainer-son {
+  position: relative;
+  height: 100px;
+  min-width: 100px;
+}
+
+.progressContainer .progressContainer-son .progress-circle {
+  color: white;
+  width: 30px;
+  height: 30px;
+  top: 50px;
+  background: #6d75e1;
+  text-align: center;
+  border-radius: 27px;
+  padding-top: 3px;
+  z-index: 2;
+  position: absolute;
+}
+
+.progressContainer .progressContainer-son .progress-line {
+  width: 100%;
+  height: 2px;
+  top: 65px;
+  background: #838383;
+  z-index: 1;
+  position: absolute;
+}
+
+.progressContainer .progressContainer-son .progress-prices-info {
+  position: absolute;
+  top: 0px;
+}
+
+.progressContainer .progressContainer-son:first-child .progress-circle {
+  background: orange;
+}
+
+.progressContainer .progressContainer-son:last-child {
+  width: initial !important;
+}
+
+.progressContainer .progressContainer-son:last-child .progress-line {
+  display: none;
 }
 
 @media (min-width: 1660px) {
