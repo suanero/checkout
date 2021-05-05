@@ -15,36 +15,29 @@
 
     <!--need-->
     <link rel="stylesheet" href="./components/css/style.css" />
+    <link rel="stylesheet" href="./components/style-font.css" />
   </head>
   <body>
     <header class="h-top">
-      <div class="container p-0">
-        <nav class="navbar navbar-expand-lg bg-white">
-          <a class="navbar-brand" href="#">MexicoDestinos</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarColor01"
-            aria-controls="navbarColor01"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarColor01">
-            <div class="mr-auto"></div>
-            <span>powe by img2</span>
+      <div class="container-fluid">
+        <div class="row justify-content-sm-center">
+          <div class="col-12 col-sm-10">
+            <nav class="navbar navbar-expand-lg bg-white d-flex d-flex justify-content-between pl-0 pr-0">
+              <a class="navbar-brand p-0" href="#"><span class="cont-font cont-logo"><i class="font font-MD-logo-app"></i></span></a>
+              <span class="cont-font cont-logo"><span class=" font font-powered-app"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span></span></span>    
+              
+            </nav>  
           </div>
-        </nav>
+        </div>
+        
       </div>
     </header>
     <div class="container-fluid">
-      <div class="row flex-column-reverse flex-sm-row mb-5">
+      <div class="row flex-column-reverse flex-lg-row">
         <div class="col-lg-8">
-          <div class="row justify-content-md-center">
+          <div class="row justify-content-sm-center">
             <div class="col-12 col-sm-8">
+              <div class="d-none d-lg-block">
               <table class="table m-0">
                 <tbody>
                   <tr>
@@ -66,14 +59,12 @@
                 </tbody>
               </table>
               <hr class="mt-0" />
+              </div>
               <div class="text-center">
                 <span class="h5 text-color-title"
                   >Hola {cliente} recibiste una solicitud de pago de México
                   Destinos</span
                 >
-              </div>
-              <div class="text-center pt-3">
-                <span class="h5 text-color-title-secondary">Calendario de pago</span>
               </div>
               <div class="pt-3">
                 <div class="card card-payment-moth">
@@ -90,7 +81,7 @@
                 <!-- el ancho depende del % asignado al style -->
                 <!-- el ultimo no lleva para quitar el espacio -->
                 <div class="pl-sm-5 pr-sm-5">
-                <div id="progressEjm" class="progressContainer d-flex flex-wrap justify-content-sm-center mt-3">
+                <div id="progressEjm" class="progressContainer d-flex flex-wrap justify-content-center mt-3">
                   <div class="progressContainer-son" style="width: 20%;">
                     <div class="progress-circle circle-selected">1</div>
                     <div class="progress-line"></div>
@@ -114,14 +105,14 @@
                   <span class="h5 text-color-title-secondary">Tus Datos</span>
                 </div>
                 <div class="row">
-                  <div class="col">
+                  <div class="col-12 col-md-6">
                     <div class="form-group">
                       <label for="inputName" class="font-weight-bold">Nombre</label>
                       <input type="text" class="form-control" id="inputName" data-help="#inputNameHelp" data-type="text">
                       <small id="inputNameHelp" class="form-text text-danger"></small>
                     </div>
                   </div>
-                  <div class="col">
+                  <div class="col-12 col-md-6">
                     <div class="form-group">
                       <label for="inputLastName" class="font-weight-bold">Apellido</label>
                       <input type="text" class="form-control" id="inputLastName" data-help="#inputLastNameHelp" data-type="text">
@@ -130,45 +121,208 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col">
+                  <div class="col-12 col-md-6">
                     <div class="form-group">
                       <label for="inputEmail" class="font-weight-bold">Correo Electrónico</label>
                       <input type="mail" class="form-control" id="inputEmail" data-help="#inputMailHelp" data-type="email">
                       <small id="inputMailHelp" class="form-text text-danger"></small>
                     </div>
                   </div>
-                  <div class="col">
+                  <div class="col-12 col-md-6">
                     <div class="form-group">
-                      <label for="inputPhoneNumber" class="font-weight-bold" data-type="phone">Télefono Fijo</label>
+                      <label for="inputPhoneNumber" class="font-weight-bold" data-type="phone">Teléfono celular</label>
                       <input type="text" class="form-control" id="inputPhoneNumber" data-help="#inputPhoneNumberHelp">
                       <small id="inputPhoneNumberHelp" class="form-text text-danger"></small>
                     </div>
                   </div>
                 </div>
-              </form>
+              </form>              
+            </div>
+            </div>
+          </div>
+          <div class="row justify-content-sm-center">
+            <div class="col-12 col-sm-10">
               <div class="text-center pt-5">
                 <span class="h5 text-color-title-secondary">Métodos de pago</span>
               </div>
-              <div class="row justify-content-md-center pt-3">
-                <div class="col-12 col-sm-8">
-                  <div class="card card-express">
+              <div class="row justify-content-md-center pt-3 contentTypePayment mb-lg-5">
+
+                <div class="col-12 col-sm-4 align-self-center pl-sm-2 pr-sm-2 mb-3 mb-lg-0">
+                  <input id="checkPaymentMethod1" name="checkPaymentMethod" type="radio" >
+                  <div class="card card-express" data-option="#checkPaymentMethod1" data-container=".containerpayments1">
                     <div class="card-body">
                       <div class="text-center text-color-title font-weight-bold">
                         Tarjeta de crédito y débito
                       </div>
-                      <div class="text-center text-color-title-secondary font-weight-bold">Pagos seguros y rápidos con cualquiera de tus tarjetas</div>
+                      <div class="text-center text-color-title-secondary">Pagos seguros y rápidos con cualquiera de tus tarjetas.</div>
                       <div class="text-center pt-2">
-                        {img visa} {img master}
+                        <span class="cont-font cont-visa">
+                          <span class="font font-visa-app"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                        </span> 
+                        <span class="cont-font cont-master">
+                          <span class="font font-mastercard-app"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span></span>
+                        </span>
                       </div>
                     </div>
                   </div>
                 </div>
+                <div class="col-12 col-sm-4 align-self-center pl-sm-2 pr-sm-2 mb-3 mb-lg-0">
+                  <input  id="checkPaymentMethod2" name="checkPaymentMethod" type="radio" value="">
+                  <div class="card card-express"  data-option="#checkPaymentMethod2"  data-container=".containerpayments2">
+                    <div class="card-body">
+                      <div class="text-center text-color-title font-weight-bold">
+                        Pago en tiendas
+                      </div>
+                      <div class="text-center text-color-title-secondary">Pagos seguros y rápidos con cualquiera de tus tarjetas.</div>
+                      <div class="text-center pt-2">
+                        <span class="cont-font cont-visa">
+                          <span class=" font font-oxxo-app"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                        </span> 
+                        <span class="cont-font cont-master">
+                          <span class=" font font-seven-app"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center pl-sm-2 pr-sm-2 mb-3 mb-lg-0">
+                  <input id="checkPaymentMethod3" name="checkPaymentMethod" type="radio" >
+                  <div class="card card-express" data-option="#checkPaymentMethod3"  data-container=".containerpayments3">
+                    <div class="card-body">
+                      <div class="text-center text-color-title font-weight-bold">
+                        Depósito Bancario
+                      </div>
+                      <div class="text-center text-color-title-secondary">Pagos seguros y rápidos con cualquiera de tus tarjetas.</div>
+                      <div class="text-center pt-2">
+                        <span class="cont-font cont-visa">
+                          <span class=" font font-deposito-app"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
+          <div class="row justify-content-sm-center mb-5">
+            <div class="col-12 col-sm-8 containerpayments containerpayments1">
+              <!-- informacion de la tarjeta -->
+              <div class="mt-3">
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="inputOwnerName" class="font-weight-bold">Nombre del titular</label>
+                      <input type="text" class="form-control" id="inputOwnerName" data-help="#inputOwnerNameHelp" data-type="text">
+                      <small id="inputOwnerNameHelp" class="form-text text-danger"></small>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="inputOwnerCard" class="font-weight-bold">Número de tarjeta</label>
+                      <div class="position-relative">
+                        <div class="mintype-card">
+                          <span class="cont-font cont-visa active">
+                            <span class="font font-visa-app"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                          </span>
+                          <span class="cont-font cont-visa">
+                            <span class=" font font-mc-app"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" id="inputOwnerCard" data-help="#inputOwnerCardHelp" data-type="number">
+                      </div>
+                      <small id="inputOwnerCardHelp" class="form-text text-danger"></small>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="inputExpirationDateCard" class="font-weight-bold">Vigencia <small class="text-color-title-secondary">(mm/aa)</small></label>
+                      <input type="text" class="form-control" id="inputExpirationDateCard" data-help="#inputExpirationDateCardHelp" data-type="date-card" placeholder="00/00">
+                      <small id="inputExpirationDateCardHelp" class="form-text text-danger"></small>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="inputCVCCodeCard" class="font-weight-bold">Código de Seguridad</label>
+                      <div class="position-relative">
+                        <div class="mintype-card">
+                          <span class="cont-font cont-visa active">
+                            <span class="font font-card-cvv-app"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span></span>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" id="inputCVCCodeCard" data-help="#inputCVCCodeCardHelp" data-type="cvc-code">
+                      </div>
+                      <small id="inputCVCCodeCardHelp" class="form-text text-danger"></small>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <hr />
+                  <p class="text-center h5 font-weight-normal mb-4 pl-3 pr-3 text-color-title-secondary">Se cargarán hoy <strong class="  text-color-title h2 font-weight-bold">$499mxn</strong> y el resto en abonos de acuerdo a tu calendario de pagos</p>
+                </div>
+                <button type="button" class="button-pay btn btn-default mt-3"><span class="font font-candado-app"></span>  Pagar y asegurar mi reservación</button>
+              </div>
+            </div>
+            <div class="col-12 col-sm-8 containerpayments containerpayments2">
+              <p class="text-center mb-2"><strong>Elige establecimiento donde realizarás tu pago</strong></p>
+              <div class="text-center pb-3 containerpayments-shoping d-flex flex-row justify-content-center">
+                <div>
+                  <input id="checkPaymentType1" name="checkPaymentType" type="radio" >
+                  <div class="cont-font cont-visa containerpayments-shop" data-option="#checkPaymentType1">
+                    <span class="font font-oxxo-app"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span></span>
+                  </div>
+                </div>
+                <div>
+                  <input id="checkPaymentType2" name="checkPaymentType" type="radio" >
+                  <div class="cont-font cont-visa containerpayments-shop b-inline" data-option="#checkPaymentType2">
+                    <span class="font font-seven-app"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span></span>
+                  </div>
+                </div>
+                
+                
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                  <p class="text-center text-color-title-secondary pb-5">Al hacer clic en "Generar cupón" recibirás las instrucciones para pagar con efectivo. Deberás realizarlo dentro de las próximas 12 horas para asegurar tu lugar.</p>
+                </div>
+              </div>
+              <div>
+                <hr />
+                <p class="text-center h5 font-weight-normal mb-4 pl-3 pr-3 text-color-title-secondary">Se cargarán hoy <strong class="  text-color-title h2 font-weight-bold">$499mxn</strong> y el resto en abonos de acuerdo a tu calendario de pagos</p>
+              </div>
+              <button type="button" class="button-pay btn btn-default"><span class="font font-candado-app"></span>  Gerenar cupón</button>
+            </div>
+            <div class="col-12 col-sm-8 containerpayments containerpayments3">
+              <div class="text-center pb-3">
+                <span class="cont-font cont-visa">
+                  <span class="font font-hsbc-app"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span></span>
+                </span>
+                <span class="cont-font cont-visa">
+                  <span class="font font-citibanamex-app"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span></span>
+                </span>
+                <span class="cont-font cont-visa">
+                  <span class=" font font-santander-app"></span>
+                </span>
+                <span class="cont-font cont-visa">
+                  <span class="font font-bbva-app"></span>
+                </span>
+
+              </div>
+              <p class="text-center text-color-title-secondary pb-3">Al hacer clic en <strong>"Pago con depósito o transferencia"</strong> recibirás un correo electrónico con las instrucciones para pagar. Deberás realizarlo dentro de las próximas 12 horas para asegurar tu lugar</p>
+              <div>
+                <hr />
+                <p class="text-center h5 font-weight-normal mb-4 pl-3 pr-3 text-color-title-secondary">Se cargarán hoy <strong class="  text-color-title h2 font-weight-bold">$499mxn</strong> y el resto en abonos de acuerdo a tu calendario de pagos</p>
+              </div>
+              <button type="button" class="button-pay btn btn-default"><span class="font font-candado-app"></span> Pagar con depósito o transferencia</button>
+            </div>
+          </div>
         </div>
-        </div>
-        <div class="col-lg-4 pr-sm-0">
+
+        <div class="col-lg-4 pr-lg-0 justify-content-md-center d-lg-flex align-items-lg-stretch mb-5 mb-lg-0 ">
           <div class="card card-checkout-color">
             <div class="card-body">
               <div class="text-center pt-3">Reservación</div>
@@ -176,7 +330,7 @@
               <h4 class="text-center title">{NOMBRE DEL HOTEL}</h4>
               <div class="text-center">Con {plan de desayuno}</div>
               <div class="pt-4">
-                <div class="table-responsive">
+                <div class="table-responsive-sm">
                   <table class="table table-information">
                     <tbody>
                       <tr>
@@ -202,7 +356,7 @@
                       </tr>
                       <tr>
                         <th scope="row" class="dborder">
-                          Fecha limite de pago
+                          Fecha límite de pago
                         </th>
                         <td class="dborder">
                           <div>{dd} del {mes} del {YYYY}</div>
@@ -332,6 +486,19 @@
       }
       $("#progressEjm").html(query);
 
+      //selection de typebottons metodo de pago
+      $("body .card-express").on("click", function() {
+        $($(this).attr("data-option")).click();
+
+        $("body .containerpayments").removeClass("container-selected");
+        $($(this).attr("data-container")).addClass("container-selected");
+      });
+
+
+      //seleccion de tienda del metodo de pago
+      $("body .containerpayments-shop").on("click", function(e) {
+        $($(this).attr("data-option")).click();
+      });
     </script>
   </body>
 </html>

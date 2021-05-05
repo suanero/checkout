@@ -82,7 +82,7 @@
   width: 100%;
   height: 2px;
   top: 65px;
-  background: #838383;
+  background: #E5E5E5;
   z-index: 1;
   position: absolute;
 }
@@ -90,6 +90,9 @@
 .progressContainer .progressContainer-son .progress-prices-info {
   position: absolute;
   top: 0px;
+  text-align: center;
+  left: -30%;
+  width: 100%;
 }
 
 .progressContainer .progressContainer-son:first-child .progress-circle {
@@ -102,6 +105,148 @@
 
 .progressContainer .progressContainer-son:last-child .progress-line {
   display: none;
+}
+
+.contentTypePayment .card-express {
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+
+.contentTypePayment input[type="radio"] {
+  display: none;
+}
+
+.contentTypePayment input[type="radio"]:checked + .card-express {
+  background: #E0E2FF;
+  padding: 20px;
+}
+
+.containerpayments {
+  display: none;
+}
+
+.containerpayments .button-pay {
+  background: #6d75e1;
+  color: white;
+  border-radius: 0;
+  text-align: center;
+  width: 100%;
+  padding: 15px;
+  font-size: 13pt;
+  font-weight: bold;
+}
+
+.containerpayments.container-selected {
+  display: block;
+}
+
+.containerpayments-shoping .cont-font {
+  opacity: 0.4;
+}
+
+.containerpayments-shoping input[type="radio"] {
+  display: none;
+}
+
+.containerpayments-shoping input[type="radio"]:checked + .cont-font {
+  opacity: 1;
+}
+
+.cont-font {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.cont-font.cont-logo {
+  height: 52px;
+}
+
+.cont-font.cont-logo .font {
+  font-size: 9em;
+  line-height: 60px;
+  color: #00B300;
+}
+
+.cont-font.cont-logo .font-powered-app {
+  font-size: 4.7em;
+  line-height: 60px;
+}
+
+.cont-font.cont-visa {
+  height: 50px;
+}
+
+.cont-font.cont-visa .font {
+  font-size: 4.5em;
+  line-height: 51px;
+}
+
+.cont-font.cont-visa .font-deposito-app {
+  font-size: 4em;
+}
+
+.cont-font.cont-visa .font-hsbc-app {
+  font-size: 8em;
+  line-height: 44px;
+}
+
+.cont-font.cont-visa .font-citibanamex-app {
+  font-size: 8em;
+  line-height: 49px;
+}
+
+.cont-font.cont-visa .font-santander-app {
+  font-size: 8em;
+  line-height: 44px;
+  color: #FE000C;
+}
+
+.cont-font.cont-visa .font-bbva-app {
+  font-size: 4em;
+  line-height: 51px;
+  color: #21337B;
+}
+
+.cont-font.cont-master {
+  height: 50px;
+}
+
+.cont-font.cont-master .font {
+  font-size: 4.5em;
+  line-height: 51px;
+}
+
+.mintype-card {
+  position: absolute;
+  right: 0px;
+}
+
+.mintype-card .cont-font {
+  opacity: 0.4;
+}
+
+.mintype-card .cont-font.active {
+  opacity: 1;
+}
+
+.mintype-card .cont-font .font {
+  font-size: 2.5em;
+  line-height: 39px;
+}
+
+.form-group {
+  color: #676767;
+}
+
+@media (max-width: 767.98px) {
+  .cont-font.cont-logo .font {
+    font-size: 6.5em;
+  }
+  .cont-font.cont-logo .font-powered-app {
+    font-size: 4em;
+    line-height: 53px;
+  }
 }
 
 @media (min-width: 1660px) {
